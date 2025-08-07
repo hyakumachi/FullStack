@@ -5,19 +5,19 @@ const server = http.createServer((req, res)=>{
     res.setHeader('Content-Type','text/html')
 
     let myUrl = './views/'
-    if(res.url == '/'){
+    if(req.url == '/'){
         myUrl += 'homepage.html'
         res.statusCode = 200
     }
-    else if(res.url == '/about'){
+    else if(req.url == '/about'){
         myUrl += 'about.html'
         res.statusCode = 200
     }
-    else if(res.url == '/contact'){
+    else if(req.url == '/contact'){
         myUrl += 'contact.html'
         res.statusCode = 200
     }
-    else if(res.url == '/product'){
+    else if(req.url == '/product'){
         myUrl += 'product.html'
         res.statusCode = 200
     }
